@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Akbaba Hukuk Bürosu | Av. Serdar Akbaba</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --navy: #0f172a;      
+            --gold: #a6894a;      
+            --soft-white: #f8fafc;
+            --text-dark: #1e293b;
+            --text-muted: #64748b;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--text-dark);
+            background-color: #fff;
+            scroll-behavior: smooth;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 8%;
+            background: rgba(255, 255, 255, 0.98);
+            border-bottom: 1px solid #e2e8f0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo-box {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+        }
+
+        .logo-img {
+            height: 45px; 
+            width: auto;
+            margin-right: 15px;
+            display: block;
+        }
+
+        .logo-brand {
+            display: flex;
+            flex-direction: column;
+            border-left: 1px solid #e2e8f0; 
+            padding-left: 15px;
+        }
+
+        .logo-name {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.3rem;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            color: var(--navy);
+            text-transform: uppercase;
+            line-height: 1;
+        }
+
+        .logo-tag {
+            font-size: 0.65rem;
+            color: var(--gold);
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            margin-top: 6px;
+            font-weight: 600;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 40px;
+        }
+
+        .nav-menu a {
+            text-decoration: none;
+            color: var(--navy);
+            font-size: 0.8rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: 0.3s;
+        }
+
+        .nav-menu a:hover { color: var(--gold); }
+
+        .hero {
+            height: 85vh;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(to right, rgba(15, 23, 42, 0.95), rgba(15, 23, 42, 0.7)),
+                        url('https://images.unsplash.com/photo-1505664194779-8beaceb93744?q=80&w=2000');
+            background-size: cover;
+            background-position: center;
+            padding: 0 8%;
+            color: #fff;
+            margin-top: 70px;
+        }
+
+        .hero-text { max-width: 650px; }
+        
+        .hero-text h1 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 3.5rem;
+            line-height: 1.1;
+            margin-bottom: 20px;
+            font-weight: 400;
+        }
+
+        .hero-text h1 strong { font-weight: 700; }
+
+        .hero-text p {
+            font-size: 1.1rem;
+            color: #cbd5e1;
+            margin-bottom: 35px;
+            font-weight: 300;
+        }
+
+        .btn-main {
+            display: inline-block;
+            padding: 15px 45px;
+            border: 1px solid var(--gold);
+            color: #fff;
+            text-decoration: none;
+            font-size: 0.8rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            transition: 0.4s;
+            cursor: pointer;
+        }
+
+        .btn-main:hover {
+            background: var(--gold);
+            color: white;
+        }
+
+        .about-section {
+            padding: 100px 8%;
+            background-color: #fff; 
+        }
+
+        .about-container {
+            display: flex;
+            align-items: flex-start;
+            gap: 60px;
+        }
+
+        .about-image {
+            flex: 1;
+            position: relative;
+        }
+
+        .about-image img {
+            width: 100%;
+            max-width: 450px;
+            border-radius: 4px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            display: block;
+            margin: 0 auto;
+        }
+
+        .about-image::before {
+            content: '';
+            position: absolute;
+            top: -20px;
+            left: 20px;
+            width: 100%;
+            max-width: 450px;
+            height: 100%;
+            border: 2px solid var(--gold);
+            border-radius: 4px;
+            z-index: -1;
+        }
+
+        .about-content {
+            flex: 1.2;
+        }
+
+        .about-content h2 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 2.2rem;
+            color: var(--navy);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 5px;
+        }
+
+        .about-content .title-accent {
+            display: block;
+            color: var(--gold);
+            font-size: 0.9rem;
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 25px;
+        }
+
+        .about-content p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            line-height: 1.7;
+            margin-bottom: 15px;
+        }
+
+        .about-list {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            list-style: none;
+            margin-top: 20px;
+            margin-bottom: 25px;
+        }
+
+        .about-list li {
+            font-size: 0.9rem;
+            color: var(--text-dark);
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+        }
+
+        .about-list li::before {
+            content: '■';
+            color: var(--gold);
+            font-size: 0.6rem;
+            margin-right: 10px;
+        }
+
+        .practice-areas {
+            padding: 100px 8%;
+            background: var(--soft-white);
+        }
+
+        .section-intro {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-intro h2 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 2.2rem;
+            color: var(--navy);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+
+        .card {
+            background: #fff;
+            padding: 40px;
+            border-bottom: 3px solid transparent;
+            transition: 0.4s;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            border-color: var(--gold);
+        }
+
+        .card h3 {
+            font-family: 'Outfit', sans-serif;
+            margin-bottom: 12px;
+            color: var(--navy);
+            font-size: 1.1rem;
+            text-transform: uppercase;
+        }
+
+        .card p {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+
+        /* --- BOŞ MAKALELER BÖLÜMÜ CSS'i --- */
+        .articles-section {
+            padding: 100px 8%;
+            background: #fff;
+        }
+
+        .empty-articles-box {
+            background: var(--soft-white);
+            border: 1px dashed #cbd5e1;
+            padding: 60px 20px;
+            text-align: center;
+            border-radius: 8px;
+        }
+
+        .empty-articles-box h3 {
+            font-family: 'Outfit', sans-serif;
+            color: var(--navy);
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+
+        .empty-articles-box p {
+            color: var(--text-muted);
+            font-size: 1rem;
+            line-height: 1.6;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        footer {
+            background: var(--navy);
+            color: #fff;
+            padding: 80px 8% 40px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 50px;
+            margin-bottom: 50px;
+        }
+
+        .footer-col h4 {
+            color: var(--gold);
+            margin-bottom: 20px;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .footer-col p {
+            color: #94a3b8;
+            font-size: 0.85rem;
+            line-height: 1.8;
+        }
+
+        .copyright {
+            padding-top: 30px;
+            border-top: 1px solid #1e293b;
+            text-align: center;
+            font-size: 0.75rem;
+            color: #475569;
+        }
+
+        @media (max-width: 900px) {
+            .hero-text h1 { font-size: 2.5rem; }
+            .nav-menu { display: none; }
+            .about-container { flex-direction: column; }
+            .about-list { grid-template-columns: 1fr; }
+            .about-image::before { display: none; } 
+            .about-image img { margin: 0 auto; }
+            .footer-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="#" class="logo-box">
+            <img src="image_3.png" alt="Akbaba Hukuk Logo" class="logo-img">
+            <div class="logo-brand">
+                <span class="logo-name">Av. Serdar Akbaba</span>
+                <span class="logo-tag">Hukuk Bürosu</span>
+            </div>
+        </a>
+        <ul class="nav-menu">
+            <li><a href="#anasayfa">Anasayfa</a></li>
+            <li><a href="#hakkimizda">Hakkımızda</a></li> 
+            <li><a href="#uzmanlik">Uzmanlıklar</a></li>
+            <li><a href="#makaleler">Makaleler</a></li>
+            <li><a href="https://wa.me/905418843665?text=Merhaba%20randevu%20bilgisi%20almak%20istiyorum." target="_blank">İletişim</a></li>
+        </ul>
+    </nav>
+
+    <section class="hero" id="anasayfa">
+        <div class="hero-text">
+            <h1>Hukuki <strong>Tecrübe</strong>, <br>Kurumsal <strong>Güvence</strong></h1>
+            <p>Akbaba Hukuk Bürosu, kurumsal ve bireysel müvekkillerine şeffaf ve sonuç odaklı çözümler sunar.</p>
+            <a href="https://wa.me/905418843665?text=Merhaba%20randevu%20bilgisi%20almak%20istiyorum." target="_blank" class="btn-main">İletişime Geç</a>
+        </div>
+    </section>
+
+    <section class="about-section" id="hakkimizda">
+        <div class="about-container">
+            <div class="about-image">
+                <img src="serdar.png" alt="Av. Serdar Akbaba">
+            </div>
+            <div class="about-content">
+                <h2>Av. Serdar Akbaba</h2>
+                <span class="title-accent">Kurucu Avukat</span>
+                
+                <p><strong>Avukat Serdar Akbaba</strong>, hukuk eğitimini Uludağ Üniversitesi Hukuk Fakültesi’nde tamamlamış olup, mesleki kariyerini geniş bir uzmanlık yelpazesiyle sürdürmektedir. Özellikle Ceza Hukuku ve Aile Hukuku alanlarında yoğunlaşmış, bu alanlarda edindiği bilgi ve tecrübe ile müvekkillerine etkin, çözüm odaklı ve stratejik hizmet sunmaktadır.</p>
+                
+                <p>Meslek hayatı boyunca aşağıdaki alanlarda aktif olarak çalışmakta ve danışmanlık sağlamaktadır:</p>
+                
+                <ul class="about-list">
+                    <li>Ceza Hukuku</li>
+                    <li>Aile Hukuku</li>
+                    <li>Hukuk Davaları (Medeni Hukuk)</li>
+                    <li>İş ve Sosyal Güvenlik Hukuku</li>
+                    <li>Ticaret Hukuku</li>
+                    <li>İcra ve İflas Hukuku</li>
+                    <li>Gayrimenkul Hukuku</li>
+                    <li>Borçlar Hukuku</li>
+                    <li>İdare Hukuku</li>
+                    <li>Vergi Hukuku</li>
+                    <li>Tüketici Hukuku</li>
+                    <li>Sigorta Hukuku</li>
+                </ul>
+
+                <p>Avukat Serdar Akbaba, mesleki gelişimini sürekli kılmak amacıyla çeşitli hukuk seminerleri ve eğitim programlarına katılım sağlamış; güncel mevzuat ve yargı uygulamalarını yakından takip etmektedir. Aynı zamanda şirketlere yönelik hukuki danışmanlık hizmetleri sunarak ticari faaliyetlerin hukuka uygun şekilde yürütülmesine katkı sağlamaktadır.</p>
+                
+                <p>Hâlen kurucusu olduğu Akbaba Hukuk ve Danışmanlık Bürosu bünyesinde, kurumsal bir yapı ve güçlü bir ekip kadrosu ile faaliyetlerini sürdürmekte; bireysel ve kurumsal müvekkillerine profesyonel avukatlık ve danışmanlık hizmeti sunmaya devam etmektedir.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="practice-areas" id="uzmanlik">
+        <div class="section-intro">
+            <h2>Uzmanlık Alanları</h2>
+        </div>
+        <div class="grid-container">
+            <div class="card">
+                <h3>Ceza Hukuku</h3>
+                <p>Soruşturma ve kovuşturma aşamalarında profesyonel müdafi ve etkili savunma stratejileri.</p>
+            </div>
+            <div class="card">
+                <h3>İşçi Hakları</h3>
+                <p>Kıdem tazminatı, işe iade davaları ve işçi-işveren arasındaki tüm hukuki uyuşmazlıklar.</p>
+            </div>
+            <div class="card">
+                <h3>Boşanma & Aile</h3>
+                <p>Anlaşmalı ve çekişmeli boşanma süreçleri, velayet ve mal paylaşımı davaları yönetimi.</p>
+            </div>
+            <div class="card">
+                <h3>Gayrimenkul</h3>
+                <p>Tapu iptal, tescil, izale-i şuyu ve taşınmaz mülkiyetine dair tüm davalar.</p>
+            </div>
+            <div class="card">
+                <h3>Miras Hukuku</h3>
+                <p>Veraset ilamı, tenkis davaları ve miras paylaşımındaki hukuki anlaşmazlıkların çözümü.</p>
+            </div>
+            <div class="card">
+                <h3>Bilişim Hukuku</h3>
+                <p>Siber suçlar, dijital verilerin korunması ve e-ticaret süreçlerindeki hukuki risk yönetimi.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- --- BOŞ MAKALELER BÖLÜMÜ --- -->
+    <section class="articles-section" id="makaleler">
+        <div class="section-intro">
+            <h2>Güncel Hukuki Makaleler</h2>
+        </div>
+        <div class="empty-articles-box">
+            <h3>Çok Yakında</h3>
+            <p>Güncel hukuki gelişmeler, emsal kararlar ve haklarınızı korumanıza yardımcı olacak bilgilendirici içeriklerimiz çok yakında bu alanda yayınlanacaktır.</p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-col">
+                <div class="logo-name" style="color: #fff; margin-bottom: 15px; letter-spacing: 2px; font-size: 1.1rem;">AKBABA HUKUK BÜROSU</div>
+                <p>Adalet her zaman doğruyu görmektir. Akbaba Hukuk Bürosu olarak bu vizyonla müvekkillerimizin yanındayız.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Hızlı Menü</h4>
+                <p>• Kurumsal<br>• Uzmanlıklar<br>• KVKK Aydınlatma Metni</p>
+            </div>
+            <div class="footer-col">
+                <h4>İletişim</h4>
+                <p>Gaziler Mahallesi Issıkgöl Caddesi<br>No:96/3 Kat:2 Gebze/Kocaeli<br>+90 541 884 36 65<br>avserdarakbaba@gmail.com</p>
+            </div>
+        </div>
+        <div class="copyright">
+            &copy; 2026 Akbaba Hukuk Bürosu. Tüm Hakları Saklıdır.
+        </div>
+    </footer>
+
+</body>
+</html>
