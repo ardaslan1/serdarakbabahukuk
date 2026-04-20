@@ -36,61 +36,14 @@
             z-index: 1000;
         }
 
-        .logo-box {
-            display: flex;
-            align-items: center;
-            text-decoration: none;
-        }
+        .logo-box { display: flex; align-items: center; text-decoration: none; }
+        .logo-img { height: 45px; width: auto; margin-right: 15px; display: block; }
+        .logo-brand { display: flex; flex-direction: column; border-left: 1px solid #e2e8f0; padding-left: 15px; }
+        .logo-name { font-family: 'Outfit', sans-serif; font-size: 1.3rem; font-weight: 700; letter-spacing: 0.5px; color: var(--navy); text-transform: uppercase; line-height: 1; }
+        .logo-tag { font-size: 0.65rem; color: var(--gold); letter-spacing: 4px; text-transform: uppercase; margin-top: 6px; font-weight: 600; }
 
-        .logo-img {
-            height: 45px; 
-            width: auto;
-            margin-right: 15px;
-            display: block;
-        }
-
-        .logo-brand {
-            display: flex;
-            flex-direction: column;
-            border-left: 1px solid #e2e8f0; 
-            padding-left: 15px;
-        }
-
-        .logo-name {
-            font-family: 'Outfit', sans-serif;
-            font-size: 1.3rem;
-            font-weight: 700;
-            letter-spacing: 0.5px;
-            color: var(--navy);
-            text-transform: uppercase;
-            line-height: 1;
-        }
-
-        .logo-tag {
-            font-size: 0.65rem;
-            color: var(--gold);
-            letter-spacing: 4px;
-            text-transform: uppercase;
-            margin-top: 6px;
-            font-weight: 600;
-        }
-
-        .nav-menu {
-            display: flex;
-            list-style: none;
-            gap: 40px;
-        }
-
-        .nav-menu a {
-            text-decoration: none;
-            color: var(--navy);
-            font-size: 0.8rem;
-            font-weight: 500;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            transition: 0.3s;
-        }
-
+        .nav-menu { display: flex; list-style: none; gap: 40px; }
+        .nav-menu a { text-decoration: none; color: var(--navy); font-size: 0.8rem; font-weight: 500; text-transform: uppercase; letter-spacing: 1px; transition: 0.3s; }
         .nav-menu a:hover { color: var(--gold); }
 
         .hero {
@@ -107,23 +60,9 @@
         }
 
         .hero-text { max-width: 650px; }
-        
-        .hero-text h1 {
-            font-family: 'Outfit', sans-serif;
-            font-size: 3.5rem;
-            line-height: 1.1;
-            margin-bottom: 20px;
-            font-weight: 400;
-        }
-
+        .hero-text h1 { font-family: 'Outfit', sans-serif; font-size: 3.5rem; line-height: 1.1; margin-bottom: 20px; font-weight: 400; }
         .hero-text h1 strong { font-weight: 700; }
-
-        .hero-text p {
-            font-size: 1.1rem;
-            color: #cbd5e1;
-            margin-bottom: 35px;
-            font-weight: 300;
-        }
+        .hero-text p { font-size: 1.1rem; color: #cbd5e1; margin-bottom: 35px; font-weight: 300; }
 
         .btn-main {
             display: inline-block;
@@ -137,218 +76,98 @@
             transition: 0.4s;
             cursor: pointer;
         }
+        .btn-main:hover { background: var(--gold); color: white; }
 
-        .btn-main:hover {
-            background: var(--gold);
-            color: white;
+        .about-section { padding: 100px 8%; background-color: #fff; }
+        .about-container { display: flex; align-items: flex-start; gap: 60px; }
+        .about-image { flex: 1; position: relative; }
+        .about-image img { width: 100%; max-width: 450px; border-radius: 4px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); display: block; margin: 0 auto; }
+        .about-image::before { content: ''; position: absolute; top: -20px; left: 20px; width: 100%; max-width: 450px; height: 100%; border: 2px solid var(--gold); border-radius: 4px; z-index: -1; }
+        .about-content { flex: 1.2; }
+        .about-content h2 { font-family: 'Outfit', sans-serif; font-size: 2.2rem; color: var(--navy); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 5px; }
+        .about-content .title-accent { display: block; color: var(--gold); font-size: 0.9rem; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 25px; }
+        .about-content p { color: var(--text-muted); font-size: 0.95rem; line-height: 1.7; margin-bottom: 15px; }
+        .about-list { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; list-style: none; margin-top: 20px; margin-bottom: 25px; }
+        .about-list li { font-size: 0.9rem; color: var(--text-dark); font-weight: 500; display: flex; align-items: center; }
+        .about-list li::before { content: '■'; color: var(--gold); font-size: 0.6rem; margin-right: 10px; }
+
+        .practice-areas { padding: 100px 8%; background: var(--soft-white); }
+        .section-intro { text-align: center; margin-bottom: 60px; }
+        .section-intro h2 { font-family: 'Outfit', sans-serif; font-size: 2.2rem; color: var(--navy); text-transform: uppercase; letter-spacing: 1px; }
+        .grid-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; }
+        .card { background: #fff; padding: 40px; border-bottom: 3px solid transparent; transition: 0.4s; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05); }
+        .card:hover { transform: translateY(-10px); border-color: var(--gold); }
+        .card h3 { font-family: 'Outfit', sans-serif; margin-bottom: 12px; color: var(--navy); font-size: 1.1rem; text-transform: uppercase; }
+        .card p { color: var(--text-muted); font-size: 0.9rem; line-height: 1.5; }
+
+        /* --- TEK SAYFA MAKALELER BÖLÜMÜ ÖZEL CSS --- */
+        .articles-section { padding: 100px 8%; background: #f1f5f9; } /* Arka planı hafif gri yaptık ki beyaz makale kutuları parlasın */
+        
+        .long-article-box {
+            background: #fff;
+            padding: 50px 8%;
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.04);
+            margin-bottom: 60px;
         }
 
-        .about-section {
-            padding: 100px 8%;
-            background-color: #fff; 
-        }
-
-        .about-container {
-            display: flex;
-            align-items: flex-start;
-            gap: 60px;
-        }
-
-        .about-image {
-            flex: 1;
-            position: relative;
-        }
-
-        .about-image img {
-            width: 100%;
-            max-width: 450px;
-            border-radius: 4px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            display: block;
-            margin: 0 auto;
-        }
-
-        .about-image::before {
-            content: '';
-            position: absolute;
-            top: -20px;
-            left: 20px;
-            width: 100%;
-            max-width: 450px;
-            height: 100%;
-            border: 2px solid var(--gold);
-            border-radius: 4px;
-            z-index: -1;
-        }
-
-        .about-content {
-            flex: 1.2;
-        }
-
-        .about-content h2 {
+        .long-article-box h1 {
             font-family: 'Outfit', sans-serif;
-            font-size: 2.2rem;
+            font-size: 2.4rem;
             color: var(--navy);
             text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-bottom: 5px;
+            text-align: center;
+            margin-bottom: 10px;
+            line-height: 1.2;
         }
 
-        .about-content .title-accent {
-            display: block;
+        .article-date-author {
+            text-align: center;
             color: var(--gold);
             font-size: 0.9rem;
             font-weight: 600;
             letter-spacing: 2px;
             text-transform: uppercase;
-            margin-bottom: 25px;
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #e2e8f0;
         }
 
-        .about-content p {
-            color: var(--text-muted);
-            font-size: 0.95rem;
-            line-height: 1.7;
-            margin-bottom: 15px;
-        }
-
-        .about-list {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 10px;
-            list-style: none;
-            margin-top: 20px;
-            margin-bottom: 25px;
-        }
-
-        .about-list li {
-            font-size: 0.9rem;
-            color: var(--text-dark);
-            font-weight: 500;
-            display: flex;
-            align-items: center;
-        }
-
-        .about-list li::before {
-            content: '■';
+        .long-article-box h3 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.3rem;
             color: var(--gold);
-            font-size: 0.6rem;
-            margin-right: 10px;
-        }
-
-        .practice-areas {
-            padding: 100px 8%;
-            background: var(--soft-white);
-        }
-
-        .section-intro {
-            text-align: center;
-            margin-bottom: 60px;
-        }
-
-        .section-intro h2 {
-            font-family: 'Outfit', sans-serif;
-            font-size: 2.2rem;
-            color: var(--navy);
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        .grid-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 25px;
-        }
-
-        .card {
-            background: #fff;
-            padding: 40px;
-            border-bottom: 3px solid transparent;
-            transition: 0.4s;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
-        }
-
-        .card:hover {
-            transform: translateY(-10px);
-            border-color: var(--gold);
-        }
-
-        .card h3 {
-            font-family: 'Outfit', sans-serif;
-            margin-bottom: 12px;
-            color: var(--navy);
-            font-size: 1.1rem;
-            text-transform: uppercase;
-        }
-
-        .card p {
-            color: var(--text-muted);
-            font-size: 0.9rem;
-            line-height: 1.5;
-        }
-
-        /* --- BOŞ MAKALELER BÖLÜMÜ CSS'i --- */
-        .articles-section {
-            padding: 100px 8%;
-            background: #fff;
-        }
-
-        .empty-articles-box {
-            background: var(--soft-white);
-            border: 1px dashed #cbd5e1;
-            padding: 60px 20px;
-            text-align: center;
-            border-radius: 8px;
-        }
-
-        .empty-articles-box h3 {
-            font-family: 'Outfit', sans-serif;
-            color: var(--navy);
-            font-size: 1.5rem;
+            margin-top: 35px;
             margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
         }
 
-        .empty-articles-box p {
-            color: var(--text-muted);
+        .long-article-box p {
             font-size: 1rem;
-            line-height: 1.6;
-            max-width: 500px;
-            margin: 0 auto;
-        }
-
-        footer {
-            background: var(--navy);
-            color: #fff;
-            padding: 80px 8% 40px;
-        }
-
-        .footer-grid {
-            display: grid;
-            grid-template-columns: 2fr 1fr 1fr;
-            gap: 50px;
-            margin-bottom: 50px;
-        }
-
-        .footer-col h4 {
-            color: var(--gold);
-            margin-bottom: 20px;
-            font-size: 0.8rem;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-        }
-
-        .footer-col p {
-            color: #94a3b8;
-            font-size: 0.85rem;
             line-height: 1.8;
+            color: #334155;
+            margin-bottom: 20px;
+            text-align: justify;
         }
 
-        .copyright {
-            padding-top: 30px;
-            border-top: 1px solid #1e293b;
-            text-align: center;
-            font-size: 0.75rem;
-            color: #475569;
+        .long-article-box ul {
+            margin-bottom: 20px;
+            padding-left: 20px;
         }
+
+        .long-article-box li {
+            font-size: 1rem;
+            line-height: 1.7;
+            color: #334155;
+            margin-bottom: 10px;
+        }
+
+        footer { background: var(--navy); color: #fff; padding: 80px 8% 40px; }
+        .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 50px; margin-bottom: 50px; }
+        .footer-col h4 { color: var(--gold); margin-bottom: 20px; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; }
+        .footer-col p { color: #94a3b8; font-size: 0.85rem; line-height: 1.8; }
+        .copyright { padding-top: 30px; border-top: 1px solid #1e293b; text-align: center; font-size: 0.75rem; color: #475569; }
 
         @media (max-width: 900px) {
             .hero-text h1 { font-size: 2.5rem; }
@@ -358,6 +177,8 @@
             .about-image::before { display: none; } 
             .about-image img { margin: 0 auto; }
             .footer-grid { grid-template-columns: 1fr; }
+            .long-article-box { padding: 30px 20px; }
+            .long-article-box h1 { font-size: 1.8rem; }
         }
     </style>
 </head>
@@ -455,14 +276,98 @@
         </div>
     </section>
 
-    <!-- --- BOŞ MAKALELER BÖLÜMÜ --- -->
     <section class="articles-section" id="makaleler">
         <div class="section-intro">
             <h2>Güncel Hukuki Makaleler</h2>
         </div>
-        <div class="empty-articles-box">
-            <h3>Çok Yakında</h3>
-            <p>Güncel hukuki gelişmeler, emsal kararlar ve haklarınızı korumanıza yardımcı olacak bilgilendirici içeriklerimiz çok yakında bu alanda yayınlanacaktır.</p>
+
+        <div class="long-article-box">
+            <h1>Kripto Para Zimmeti Suçu</h1>
+            <div class="article-date-author">Av. Serdar Akbaba | Bilişim & Ceza Hukuku</div>
+            <p>Kripto para zimmeti, kripto varlık hizmeti sağlayan bir şirketin yöneticilerinin başkalarından aldıkları veya başkaları adına aldıkları ve zilyetlerinde bulundurdukları kripto paraları kendilerinin veya üçüncü kişilerin hesabına geçirmeleridir. TCK’da yer alan zimmet suçunun özel bir türü olan kripto varlık zimmeti suçu kripto para suçları arasında olmasına rağmen Sermaye Piyasası Kanunu’nda düzenlenmiştir. Zimmet suçu esasen yalnızca kamu görevlilerinin işleyebileceği bir suç türüdür. Nitekim banka zimmeti suçunun failinin banka çalışanları olması da bu durumla çelişmemektedir. Zira banka çalışanları da ceza hukuku anlamında kamu görevlisi sayılmaktadır. Ancak kripto para zimmeti düzenlemesi ise zimmet suçunun kamu görevlisi tarafından işlenebileceği kuralına gerçek manada istisna getirmektedir.</p>
+            
+            <h3>1. Kripto Para Zimmetinin Özellikleri</h3>
+            <p>Kripto para zimmeti maddi unsur olarak kanunda iki ayrı durum olarak düzenlenmiştir. Bunlardan birincisi kripto varlık hizmet sağlayıcısı şirketin yönetim kurulu başkanının veya diğer yöneticilerinin kripto varlık hizmet sağlayıcılığı görevi nedeniyle kendilerine verilen kripto para veya kripto varlıkların kendilerinin veya başkalarının zimmetine geçirmeleridir. İkinci durum ise faaliyet izni kaldırılan bir kripto varlık hizmet sağlayıcının ortaklarının, fiili veya gerçek yöneticilerinin kripto varlık hizmet sağlayıcının elinde bulunan kripto para veya varlıkları tehlikeye düşürecek şekilde doğrudan veya dolaylı olarak kendilerinin veya başkalarının menfaatlerine kullandırmak zarara neden olmalarıdır.</p>
+            
+            <h3>2. Kripto Para Zimmetinin Cezası</h3>
+            <p>Kripto para zimmetinin cezası 8 yıldan 14 yıla kadar hapis ve 5.000 güne kadar adli para cezasıdır. Eğer kripto para zimmeti suçu işleyenler, zimmetin açığa çıkmaması için hileli (aldatıcı) işlemler yapmışlarsa bu durumda suçun cezası 14 yıldan 20 yıla kadar hapis ve 20.000 güne kadar adli para cezasına yükselecektir. Nitekim zimmet suçlarında genel olarak zimmeti gizleyici işlemler yapmak suçun ağrılaştırıcı sebebidir.</p>
+
+            <h3>3. Cezai Tazminat</h3>
+            <p>Sermaye Piyasası Kanunu’ndaki zimmet suçu düzenlemesi ceza mahkemesi yargıçlarına “tazminat cezası” verme yetkisi getirmektedir. Nitekim ilgili madde faillerin hapis ve para cezasına ek olarak zararın tazminine mahkum edileceklerin düzenlemektedir. Türk Hukuk sisteminde tazminat yalnızca özel hukuk uyarınca ve hukuk mahkemelerince verilmektedir.</p>
+
+            <h3>4. Kripto Para Zimmetinde Etkin Pişmanlık</h3>
+            <p>Soruşturma başlamadan önce, zimmete geçirilen para veya para yerine geçen evrak veya senetlerin, diğer malların veya kripto varlıkların aynen iade edilmesi veya uğranılan zararın tamamen tazmin edilmesi halinde, verilecek ceza 2/3 oranında indirilecektir.</p>
+
+            <h3>5. Kripto Para Zimmetinde Şahsi Sorumluluk</h3>
+            <p>Kripto para zimmeti suçu işleyen kripto varlık hizmet sağlayıcısı olan şirketlerin yönetim kurulu başkan ve üyeleri, yöneticilik görevi olan ortaklarının müşterilere verdikleri zararların karşılanması amacıyla faillerin özel hukuk anlamında şahsi sorumlulukları gündeme gelecektir. Bu kapsamda SPK‘nın talebi üzerine faillerin şahsen iflaslarına mahkemece karar verilebileceği gibi üçüncü kişilere menfaat temini amacıyla zimmet yapılmış olması halinde menfaat temin eden kişiler hakkında da temin ettikleri menfaat üzerinden uygulanır.</p>
+        </div>
+
+        <div class="long-article-box">
+            <h1>İddet Müddetinin (Bekleme Süresinin) Kaldırılması</h1>
+            <div class="article-date-author">Av. Serdar Akbaba | Aile Hukuku</div>
+            <p>İddet sözcüğü Arapça kökenli olup İslam hukukunda “boşanmadan sonra kadının tekrar evlenmesi için gereken süre” anlamına gelmektedir. İslam hukukunda kadının iddet süresi evliliğin sona erme sebebine göre değişmektedir. Türk Medeni Kanunu’nda geçen iddet müddeti kavramı ise boşanan kadının yeniden evlenebilmesi için beklemesi gereken 300 günlük süreyi ifade eder.</p>
+            <p>Türk Medeni Kanunu’nun 132. Maddesinde; "Evlilik sona ermişse, kadın, evliliğin sona ermesinden başlayarak üçyüz gün geçmedikçe evlenemez. Doğurmakla süre biter. Kadının önceki evliliğinden gebe olmadığının anlaşılması veya evliliği sona eren eşlerin yeniden birbiriyle evlenmek istemeleri hallerinde mahkeme bu süreyi kaldırır." Şeklinde düzenlenmiştir.</p>
+
+            <h3>İddet Müddeti Düzenlemesi İle Korunan Hukuki Değer Nedir?</h3>
+            <p>İddet müddeti düzenlemesi ile korunmak istenen hukuki değer evliliğin sona ermesinden sonra doğma ihtimali bulunan çocuğun soybağıdır. TMK’nın 285. Maddesinde düzenlenen babalık karinesine göre “Evlilik devam ederken veya evliliğin sona ermesinden başlayarak üçyüz gün içinde doğan çocuğun babası kocadır.” Görüleceği üzere evliliğin sona ermesinden itibaren 300 gün içinde doğan çocuğun babası koca sayılmaktadır.</p>
+
+            <h3>İddet Süresinde Yapılan Evlilik Geçerli Midir?</h3>
+            <p>İddet müddeti veya bekleme süresi kadın için kesin olmayan bir evlenme engelidir. Bunun anlamı ise boşanma kararının kesinleşmesinden başlayan 300 günlük bekleme süresi henüz geçmeden kadın ikinci evlilik yapmışsa bu evlilik sakat veya geçersiz olmayacaktır. Yani geçerli bir evliliğin bütün sonuçları doğacaktır.</p>
+
+            <h3>İddet Müddetini Sona Erdiren Durumlar</h3>
+            <ul>
+                <li>TMK 132’de düzenlenen 300 günlük bekleme süresi, boşanma kararının kesinleşmesinin üzerinden üçyüz gün geçmekle kendiliğinden sona erer.</li>
+                <li>İddet müddetinin sona ermesini sağlayan diğer bir durum ise hamile kadının doğum yapmış olmasıdır. Şöyle ki, boşanma kararının kesinleşmesinin ardından başlayan 300 günlük sürenin içinde örneğin 200.gün doğum yapmış olan kadın yeniden evlenebilmek için artık geriye kalan 100 günü beklemeyecektir.</li>
+                <li>Kadının önceki evliliğinden gebe olmadığını ispat etmesi üzerine veya boşandığı kocası ile yeniden evlenme talebi üzerine verilen mahkeme kararı da iddet müddetini sona erdiren bir diğer durumdur.</li>
+            </ul>
+
+            <h3>İddet Müddetinin (Bekleme Süresinin) Kaldırılması Davası</h3>
+            <p><strong>Çekişmesiz Yargı İşlerindendir:</strong> Yeniden evlenmede bekleme süresinin hakim tarafından kaldırılması, HMK’nın 382. maddesinde sayılan çekişmesiz yargı işlerindendir.<br>
+            <strong>Aile Mahkemeleri Görevlidir:</strong> İddet müddetinin kaldırılması davalarına bakmakla görevli mahkemeler Aile mahkemeleridir. Aile mahkemesi bulunmayan yerlerde ise Asliye Hukuk Mahkemeleri görevli olacaktır.<br>
+            <strong>Kadının gebe olmadığının tespiti:</strong> İddet müddetinin mahkeme tarafından kaldırılabilmesi için kadının herhangi bir gebelik durumunun bulunmadığının ispatı gerekir. Bu da mahkemenin davacı hakkında sağlık kontrolü talimatı vermesi üzerine yapılacak testler ve alınan doktor raporlarının mahkemeye sunulması ile sağlanır.</p>
+        </div>
+
+        <div class="long-article-box">
+            <h1>Zina (Aldatma) Nedeniyle Boşanma Davası</h1>
+            <div class="article-date-author">Av. Serdar Akbaba | Aile Hukuku</div>
+            <p>Kadın ve erkeğin evlenmesiyle evlilik birliği kurulmuş olur. Eşlerin; kurulan evlilik birliğinin mutluluğunu elbirliğiyle sağlamak, çocukların bakımlarına ve gözetimine beraberce özen göstermek, birlikte yaşamak, birbirine yardımcı olmak ve birbirine sadık kalmak gibi kanundan doğan bir takım hak ve yükümlülükleri bulunur. Zina, TMK’nın 161. maddesinde düzenlenen özel boşanma sebeplerindendir. Zina (aldatma) nedeniyle boşanma davası ise eşlerden birinin kanundan doğan sadakat yükümlülüğüne aykırı davranması neticesinde diğer eşin açabileceği davası türünü ifade eder.</p>
+
+            <h3>Zina (Aldatma) Mutlak Boşanma Sebebidir</h3>
+            <p>Zina, mutlak bir boşanma sebebidir. Dolayısıyla zina eyleminin ispatlanması boşanma kararı verilmesi için yeterlidir. Hakim karar verirken, zina nedeniyle evlilik birliğinin nasıl etkilendiğiyle veya ortak hayata devam edilebilir olup olmadığıyla ilgilenmeyecektir. Zina aynı zamanda kusura dayalı boşanma sebeplerindendir.</p>
+
+            <h3>Zina Nedeniyle Boşanma Davası Şartları</h3>
+            <ul>
+                <li><strong>Evlilik Şartı:</strong> Eşlerden birinin zinasından bahisle boşanma kararı verilebilmesi için resmi makamlar huzurunda usule uygun şekilde kurulmuş bir evlilik ilişkisinin bulunması şarttır.</li>
+                <li><strong>Başkası İle Cinsel İlişki Şartı:</strong> Zinaya dayalı boşanma davasının ikinci şartı ise eşlerden birisinin eşi dışında başka birisiyle fiilen yaşadığı cinsel ilişkidir. Cinsel ilişkinin bir defaya mahsus olması veya korunma yönteminin kullanılmış olması dava açmaya engel değildir. Cinsel ilişki içermeyen flört, sarılma, öpüşme zina sayılmaz.</li>
+                <li><strong>Zina Yapan Eşin Kusurlu Olması Şartı:</strong> Eşinden başka birisiyle cinsel ilişki yaşayan kişinin davranışının zina sayılabilmesi için, bu davranışı bilerek isteyerek yani öz iradesiyle yapmış olması şarttır.</li>
+            </ul>
+
+            <h3>Zina Nedeniyle Boşanma Davasında İspat ve Hak Düşürücü Süre</h3>
+            <p>Zina nedeniyle boşanma davalarında; doktor raporları, fotoğraflar, tanık ifadeleri, otel kayıtları, resmi belgeler ispat aracı olarak kullanılabilir. Ayrıca sosyal medya yazışmaları, otel kayıtları gibi hukuka uygun elde edilen deliller de kullanılabilir. TMK’nın 161. Maddesinin 2. Fıkrası gereğince, davaya hakkı olan eşin boşanma sebebini öğrenmesinden başlayarak altı ay ve her halde zina eyleminin üzerinden beş yıl geçmekle dava hakkı düşer.</p>
+
+            <h3>Tazminat, Nafaka ve Velayet Durumu</h3>
+            <p>Zina nedeniyle boşanma davasının kabulü halinde davalı eş, tam kusurlu kabul edileceğinden maddi ve manevi tazminat ile yoksulluk nafakası talep etme hakkı bulunmamaktadır. Velayet ergin olmayan çocukların eğitim, bakım ve mallarının korunmasına ilişkin ana ve babaya yüklenen hak ve sorumlulukları ifade eder. Tarafların boşanma davasındaki kusur durumlarının velayetin belirlenmesine herhangi bir etkisi yoktur. Velayeti belirleyen kriterler her zaman çocuğun üstün yararı ve güvenliğidir.</p>
+        </div>
+
+        <div class="long-article-box">
+            <h1>Göçmen Kaçakçılığı Suçu</h1>
+            <div class="article-date-author">Av. Serdar Akbaba | Ceza Hukuku</div>
+            <p>5237 sayılı TCK’nin 79’uncu maddesinde göçmen kaçakçılığı suçu düzenlenmiştir: "Doğrudan doğruya veya dolaylı olarak maddî menfaat elde etmek maksadıyla, yasal olmayan yollardan; a) Bir yabancıyı ülkeye sokan veya ülkede kalmasına imkân sağlayan, b) Türk vatandaşı veya yabancının yurt dışına çıkmasına imkân sağlayan kişi, üç yıldan sekiz yıla kadar hapis ve onbin güne kadar adlî para cezası ile cezalandırılır. Suç, teşebbüs aşamasında kalmış olsa dahi, tamamlanmış gibi cezaya hükmolunur."</p>
+
+            <h3>Göçmen Kaçakçılığı Suçunun Unsurları</h3>
+            <ul>
+                <li>Bir yabancıyı yasal olmayan yollarla Türkiye’ye sokulmalı veya Türkiye’de kalmasına imkan sağlanmalıdır.</li>
+                <li>Türk vatandaşı veya yabancının yasal olmayan yollardan yurt dışına çıkmasına imkan sağlanmalıdır.</li>
+                <li>İlgili suç maddi menfaat elde etmek amacıyla işlenmelidir: Kanun koyucu maddi menfaati geniş yorumlayarak doğrudan ya da dolaylı menfaatten bahsetmiştir. Maddi menfaati ekonomik değerler üzerinden değerlendirilmesi gerekmekte olup cinsel veya psikolojik yarar maddi menfaat kapsamında değerlendirilmemektedir.</li>
+                <li>Herkes tarafından işlenebilen suç, bireysel yahut suç örgütü aracılığıyla da işlenebilmektedir.</li>
+            </ul>
+
+            <h3>Teşebbüs ve Ceza Arttırımı</h3>
+            <p>İlk fıkranın son cümlesinin düzenlemesine göre göçmen kaçakçılığı suçuna teşebbüs olanağı ortadan sonraki düzenlemeler ile kaldırılmıştır. TCK’nin teşebbüs hükümlerinden farklı olarak mezkur suçun teşebbüs aşamasında kalması halinde dahi suç tamamlanmışçasına cezaya hükmolunacağı ifade edilmiştir. Suçun mağdurların hayatı bakımından bir tehlike oluşturması ya da onur kırıcı hareketlere maruz bırakılması halinde ilk fıkrada belirlenen temel cezanın 1/2’sinden 2/3’üne kadar arttırım yapılacağı düzenlenmiştir.</p>
+
+            <h3>Örgüt ve Tüzel Kişi Faaliyetleri</h3>
+            <p>Bu suçun bir örgütün faaliyeti çerçevesinde işlenmesi hâlinde, verilecek cezalar yarı oranında artırılır. Maddenin son fıkrasında ise; suçun bir tüzel kişinin faaliyetleri doğrultusunda işlenmesi halinde TCK’nin 60’ıncı maddesinde düzenlenen güvenlik tedbirlerinin uygulanacağı açıkça ifade edilmiştir.</p>
+            <p>Faillerin göçmen kaçakçılığı suçunu işlerken kullandıkları veya suçtan sağladıkları eşya, para, araç veya diğer maddi değerler TCK’nin 54 ve 55’inci maddelerince müsadereye tabiidir. Ayrıca göçmen kaçakçılığı ile birlikte başkaca suçların (sahte kimlik, ikamet belgeleri, pasaport düzenlenmesi) işlenmesi halinde bu suçlardan da ayrı olarak cezalandırılacaktır.</p>
         </div>
     </section>
 
